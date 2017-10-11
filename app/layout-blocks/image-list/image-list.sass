@@ -1,0 +1,218 @@
+@mixin center($horizontal: true, $vertical: true) 
+  position: absolute
+  @if ($horizontal and $vertical) 
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  @else if ($horizontal) 
+    left: 50%
+    transform: translate(-50%, 0)
+  @else if ($vertical) 
+    top: 50%
+    transform: translate(0, -50%)
+
+.header
+  min-height: 6.25em
+
+//left-col  
+.left-column-header
+  position: relative
+  padding: 0
+  height: 6.25em
+  background-color: #085a88
+
+.logo
+  position: absolute
+  left: 23px
+  top: 20px
+  z-index: 1  
+
+.yajim-font span
+  &:nth-of-type(1)
+    font-size: 4.375em
+    color: rgba(255,255,255,0.1)
+    font-family: Arial, sans-serif
+    font-weight: bolder
+    text-transform: uppercase
+    position: absolute
+    top: 10px
+    left: 95px
+
+.yajim-font span
+  &:nth-of-type(2)
+    font-size: 2.625em
+    color: rgba(255,255,255,1)
+    font-family: Arial, sans-serif
+    font-weight: bolder
+    text-transform: uppercase
+    position: absolute
+    top: 55px
+    left: 145px  
+
+
+//center-col
+.center-col
+  padding: 0
+  height: 6.25em
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.contact-info
+  display: flex
+  flex-flow: column nowrap  
+  margin-left: 3.75em
+
+.contact-info__name
+  position: relative
+  font-size: 1.5em
+
+.online-status-true
+  position: absolute
+  right: 0
+  top: 10px
+  width: 13px
+  height: 13px
+  background-color: #749925
+  border-radius: 6px 7px 7px 6px/6px 6px 7px 7px
+
+.online-status-false
+  position: absolute
+  right: 0
+  top: 10px
+  width: 13px
+  height: 13px
+  background-color: #ff0000
+  border-radius: 6px 7px 7px 6px/6px 6px 7px 7px
+
+.contact-info__jabber-id
+  font-size: 1.125em   
+
+.input 
+  position: relative
+
+.input-field
+  border-radius: 5px
+  background-color: #f6f5f5
+  margin-right: 3.75em
+  width: 320px
+  height: 40px
+  padding-left: 1.25em
+
+.search-icon
+  background: url('../search_icon.png')
+  background-repeat: no-repeat
+  background-position: 0 0 
+  height: 25px
+  width: 30px   
+  @include center
+  left: 80%
+
+
+//right-col
+.menu-col
+  position: relative
+  padding: 0
+  height: 6.25em
+  background-color: #085a88
+
+.menu-col span
+  font-size: 4.375em
+  color: rgba(255,255,255,0.1)
+  font-family: Arial, sans-serif
+  font-weight: bolder
+  text-transform: uppercase
+  position: absolute
+  left: -23px
+
+  
+
+//burger menu
+
+.burger-menu
+  position: relative
+  width: 40px
+  height: 40px
+  cursor: pointer
+  float: right
+  margin-right: 25px
+  margin-top: 30px
+  z-index: 100
+
+.burger-menu 
+  span
+    display: flex
+    flex-flow: column
+    position: absolute
+    top: 19px
+    left: 8px
+    right: 8px
+    height: 4px
+    border-radius: 2px
+    background-color: #fff
+
+.burger-menu
+  span
+    &:before
+      content: ""
+      display: block
+      width: 100%
+      height: 4px
+      border-radius: 2px
+      background-color: #fff
+  span
+    &:after
+      content: ""
+      display: block
+      left: 0
+      top: 0
+      width: 100%
+      height: 4px
+      border-radius: 2px
+      background-color: #fff
+
+.burger-menu
+  span
+    &:before
+      padding-top: 4px
+      margin-top: -8px
+
+.burger-menu
+  span
+    &:after
+      padding-top: 4px
+      margin-top: 12px 
+
+
+//burger logout menu
+
+.burger-menu-logout 
+  width: 175px
+  height: 110px
+  background-color: #4783a4
+  border-top-left-radius: 5px
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
+  position: absolute
+  right: -10px
+  top: -7px
+  z-index: -1
+  display: flex
+
+.burger-menu-logout ul
+  display: flex
+  
+
+.burger-menu-logout li 
+  align-self: flex-end
+  padding-left: 15px
+  text-decoration: none
+
+
+.burger-menu-logout li a
+  color: rgba(255,255,255,0.4)
+  &:hover
+    color: rgba(255,255,255,1)
+
+  
+  

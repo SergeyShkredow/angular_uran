@@ -1,0 +1,155 @@
+.left-column
+  background-color: #071d29
+  display: flex
+  flex-flow: column nowrap
+
+.left-column__title-users,.left-column__title-rooms
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-right: 20px
+
+h4
+  color: #fff
+  text-transform: uppercase
+  font-size: 1em
+  line-height: 40px
+  padding-left: 40px
+
+//USERLIST
+#users
+  overflow-y: auto
+  max-height: 150px
+
+.userlist
+  padding-top: 50px
+  color: #ffffff
+
+.userlist li, .roomlist li
+  padding: 0 20px 0 40px
+  margin-right: 20px
+  border-top-right-radius: 5px
+  border-bottom-right-radius: 5px
+  line-height: 40px
+  cursor: pointer
+  &:hover 
+    background-color: #ba1142
+    height: 40px
+
+#addUser
+  padding-right: 20px    
+
+li a
+  color: #fff
+  text-decoration: none
+  &:hover 
+    color: #fff
+    text-decoration: none
+  &:visited
+    color: #fff
+    text-decoration: none  
+
+.user-online-status-true
+  width: 13px
+  height: 13px
+  background-color: #749925
+  border-radius: 6px 7px 7px 6px/6px 6px 7px 7px
+
+.user-online-status-false
+  width: 13px
+  height: 13px
+  background-color: #ff0000
+  border-radius: 6px 7px 7px 6px/6px 6px 7px 7px
+
+//divider
+.divider
+  background-color: #52616a
+  height: 1px
+  width: 100%
+  margin: 30px 0 30px 0
+
+//ROOMLIST
+#rooms
+  overflow-y: auto
+  max-height: 150px
+
+#addRoom
+  color: #fff
+  cursor: pointer
+  padding-right: 20px
+
+.left-column__title-rooms
+  position: relative
+
+.roomlist__dropout-menu
+  position: absolute
+  top: 0px
+  right: 0
+  background-color: #4783a4
+  width: 110px
+  height: 130px
+  border-top-left-radius: 5px
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
+
+.wrapper
+  position: relative
+
+.wrapper > i 
+  position: absolute
+  top: 22px
+  right: 20px
+  cursor: pointer
+  color: #fff  
+
+
+//dropdown menu rooms
+.roomlist__dropout-menu span
+  color: rgba(255,255,255,0.4)
+  font-size: 1em
+  padding: 0px 15px 0 20px
+  line-height: 30px
+  cursor: pointer
+  display: block
+  &:hover 
+    color: rgba(255,255,255,1)
+    background-color: transparent
+
+.roomlist__dropout-menu span
+  &:nth-of-type(1)
+    margin-top: 50px
+
+.roomlist__dropout-menu span
+  &:nth-of-type(2)
+
+
+.roomlist__dropout-menu > i
+  color: #fff
+  cursor: pointer
+  padding: 20px 20px 10px 0
+
+
+//settings
+.settings
+  position: relative
+
+.settings-icon
+  position: absolute
+  top: 35px
+  left: 40px
+
+.left-column__input
+  padding-top: 30px
+
+.left-column__input-settings::placeholder
+  color: rgba(255,255,255, 0.3)
+
+.left-column__input-settings
+  background-color: transparent
+  outline: none
+  border: none
+  color: #fff
+  padding-left: 80px
+  font-style: italic
+  cursor: pointer
+

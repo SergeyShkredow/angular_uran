@@ -1,0 +1,22 @@
+<div ng-controller="userCtrl">
+    <form class="modal-content animate" action="" name ="myForm" novalidate  ng-submit="CheckUser(checkUser)">
+        <h2>Login</h2>
+        <div class="form-inner container">
+            <label>Username</label>
+            <input class="form-control" name="user" ng-model="login_data.username" ng-required="requireValue" type="text"
+                   ng-minlength="4" ng-maxlength="16"
+                   ng-pattern="matchPattern" placeholder="Use A-Z, 0-9 min 4 - max 16 symbols"
+                   name="userna me" required>
+
+            <label>Password</label>
+            <input class="form-control" type="password" name="password" ng-model="login_data.password"
+                   ng-required="requireValue" ng-minlength="8" ng-maxlength="64"
+                   ng-pattern="matchPattern" placeholder="Use A-Z, 0-9 min 8 - max 64 symbols"
+                   name="psword" required>
+
+            <button class="btn login-submit" type="submit" ng-disabled="myForm.$invalid"
+                    data-dismiss="modal" ng-click="login()">Go</button>
+
+        </div>
+    </form>
+</div>
